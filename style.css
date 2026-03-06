@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    /*background-color: hsl(252, 19%, 9%);*/
+    background-image:
+        url(assets/images/pattern-circle.svg),
+        url(assets/images/pattern-circle.svg),
+        url(assets/images/pattern-lines.svg),
+        url(assets/images/pattern-squiggly-line-top.svg),
+        url(assets/images/pattern-squiggly-line-bottom-desktop.svg),
+        url(assets/images/background-desktop.png);
+    background-repeat: 
+        no-repeat,
+        no-repeat,
+        repeat-x,
+        no-repeat,
+        no-repeat
+        no-repeat;
+    background-position:
+        top -6% left 5%,
+        top 60% right 30%,
+        top center,
+        top 10% right,
+        bottom left,
+        center ;
+    background-size:
+        120px auto,
+        120px auto,
+        contain,
+        auto,
+        auto,
+        cover;
+    color: white;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.logo{
+    text-align: center;
+    margin-top: 3rem;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+header h1{
+    margin-top: 0.5rem;
+}
+header p{
+    margin-top: 0.6rem;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.upload{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 1.2rem;
+}
+.uploadtxt{
+    width: fit-content;
+    font-size: 20px;
+}
+.uploadbox{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(245, 19%, 35%);
+    width: 25rem;
+    padding: 1.3rem;
+    margin-top: 0.3rem;
+    opacity: 0.5;
+    border: 2px dashed rgba(255, 255, 255, 40%);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.remimg, .chgimg{
+    width: fit-content;
+    font-size: 12px;
+    padding: 0.3rem;
+    border-radius: 10px;
+    background: hsl(244, 28%, 31%);
+    color: white;
+    border: none;
+}
+.tuttxt{
+    text-align: center;
+    font-size: 0.9rem;
+}
+.uploadbox:hover{
+    opacity: 0.8;
+    border: 2px dashed rgba(255, 255, 255, 80%);
+}
+.uploadbox div{
+    text-align: center;
+}
+.infobox{
+    display: flex;
+    flex-direction: row;
+}
+.infotxt{
+    font-size: 10px;
+    margin-top: 3px;
+}
+.infotxt.error{
+    font-size: 10px;
+    margin-top: 3px;
+    content: "Your Image Is Required For the Booking";
+    color: red;
+}
+.infoicon{
+    font-size: 1px;
+}
+.namebox, .emailbox, .gitbox{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 25rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+.nametxt, .emailtxt, .gittxt{
+    font-size: 20px;
+    margin-bottom: 0.3rem;
+}
+.nameinput, .emailinput, .gitinput{
+    background: hsl(245, 19%, 35%);
+    opacity: 0.5;
+    width: 25rem;
+    height: 2rem;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.nameinput.error, .emailinput.error, .gitinput.error{
+    background: hsl(245, 19%, 35%);
+    opacity: 0.5;
+    width: 25rem;
+    height: 2rem;
+    border: 2px solid red;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.namemsg, .emailmsg, .gitmsg{
+    display: none;
+}
+.namemsg.error, .emailmsg.error, .gitmsg.error{
+    display: block;
+    font-size: 15px;
+    color: red;
+    letter-spacing: -0.5px;
+}
+.nameinput:hover, .emailinput:hover, .gitinput:hover{
+    opacity: 0.8;
+}
+.emailinput::placeholder, .gitinput::placeholder{
+    padding-left: 7px;
+    font-size: 12px;
+    color: white;
+}
+.btnbox{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.genticket{
+    width: 25rem;
+    height: 2.5rem;
+    background: hsl(7, 88%, 67%);
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.genticket:hover{
+    background: hsl(7, 71%, 60%);
+}
+.genticket:active{
+    border: 1px solid black;
+}
+.ticket{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.userNameHeader{
+    background:linear-gradient(90deg, hsl(7, 88%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 700;
+}
+.userEmail{
+    color: hsl(7, 81%, 67%);
+}
+.conTXT{
+    font-size: 40px;
+} 
+.sucessTxt{
+    margin-top: 0.5rem;
+}
+.ticket-container{
+    align-self: center;
+    position: relative;
+    width: 100%;    
+    max-width: 450px;
+    text-align: center;
+    margin-top: 3rem;
+}
+.ticketBg{
+    width: 100%;
+}
+.ticket-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 0 0 1rem;
+}
+.ticketAvatar{
+    position: absolute;
+    width: fit-content;
+    max-width: 60px;
+    top: 8rem;
+}
+.userAvatar{
+    width: 60px;
+    border-radius: 10px;
+}
+.location{
+    font-size: 13px;
+    margin-left: 3rem;
+}
+.userName{
+    position: absolute;
+    top: 8.5rem;
+    left: 5.5rem;
+    font-weight: 700;
+    font-size: 18px;
+}
+.gitIcon{
+    position: absolute;
+    top: 9.8rem;
+    left: 5.3rem;
+}
+.gitUserName{
+    position: absolute;
+    top: 10rem;
+    left:6.6rem;
+}
+.ticketId{
+    position: absolute;
+    right: -13rem;
+    top: 6rem;
+    transform: translateY(-50%) rotate(90deg);
+    font-size: 20px;
+    color: hsl(245, 19%, 70%);
+    font-weight: 700;
+}
+.secondBR{
+    display: none;
+}
+@media(max-width:430px){
+    body{
+        background-image: 
+            url(assets/images/pattern-circle.svg),
+            url(assets/images/pattern-circle.svg),
+            url(assets/images/pattern-lines.svg),
+            url(assets/images/pattern-squiggly-line-top.svg),
+            url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),
+            url(assets/images/background-mobile.png);
+        background-repeat: 
+            no-repeat,
+            no-repeat,
+            repeat-x,
+            no-repeat,
+            no-repeat,
+            no-repeat;
+        background-position: 
+            top -6% left -10%,
+            top 60% right 30%,
+            top center,
+            top  right,
+            bottom left,
+            center;
+        background-size: 
+            120px auto,
+            120px auto,
+            contain,
+            200px auto,
+            400px auto,
+            cover;
+    }
+    .break{
+        display: none;
+    }
+    .pused{
+        padding: 0 2.5rem 0 2.5rem;
+    }
+    .upload{
+        margin-top: 2.5rem;
+    }
+    .uploadbox{
+        width: 20rem;
+    }
+    .namebox, .emailbox, .gitbox{
+        width: fit-content;
+        margin-top: 1.5rem;
+    }
+    .nameinput, .emailinput, .gitinput{
+        width: 20rem;
+    }
+    .nameinput.error, .emailinput.error, .gitinput.error{
+        width: 20rem;
+    }
+    .genticket{
+        width: 20rem;
+    }
+    .btnbox{
+        margin-top: 3rem;
+    }
+    .nametxt, .emailtxt, .gittxt{
+        font-size: 17px;
+        margin-bottom: 0.5rem;
+    }
+    .secondBR{
+        display: block;
+    }
+    .firstBR{
+        display: none;
+    }
+    .conTXT{
+        font-size: 35px;
+        padding: 0 0.3rem 0 0.3rem;
+    }
+    .sucessTxt{
+        font-size: 1.3rem;
+        padding: 0 0.5rem 0 0.5rem;
+    }
+    .thirdBR{
+        display: none;
+    }
+    .ticket-container{
+        max-width: 360px;
+        width: 100%;
+    }
+    .ticketAvatar{
+        top: 6.3rem;
+    }
+    .userName{
+        top: 6.9rem;
+    }
+    .gitIcon{
+        top: 8.2rem;
+    }
+    .gitUserName{
+        top: 8.4rem;
+    }
+     .ticketId{
+        right: -8rem;
+        top: 5.5rem;
+        font-size: 18px;
+    }
+}

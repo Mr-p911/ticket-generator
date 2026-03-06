@@ -1,0 +1,94 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conference Ticket Generator</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div class="logo"><img src="assets/images/logo-full.svg"/></div>
+            <section class="formInput">
+                <header>
+                    <h1>
+                        Your Journey to Coding Conf<br class="break"/>2025 Starts Here!
+                    </h1>
+                    <p class="pused">
+                        Secure Your spot at next year's biggest coding Conference.
+                    </p>
+                </header>
+                <div>
+                    <form>
+                        <!--contains everything for the upload input-->
+                        <div class="upload">
+                            <label for="avatar" class="uploadtxt">Upload Avatar</label>
+                            <!--Starting of the designed box-->
+                            <label class="uploadbox" for="avatar">
+                                <div class="icon-container">
+                                    <img src="assets/images/icon-upload.svg" alt=""/>
+                                </div>
+                                <div class="opt" style="justify-content: space-around; display: none;">
+                                    <button class="remimg">Remove Image</button>
+                                    <button class="chgimg">Change Image</button>
+                                </div>
+                                <p class="tuttxt">Drag and drop or click to upload</p>
+                            </label>
+                            <!--End of the designed box-->
+                            <div class="infobox">
+                                <img src="assets/images/icon-info.svg" class="infoicon"/>
+                                <p class="infotxt">Upload your photo (jpeg or png).</p>
+                            </div>
+                            <input type="file" id="avatar" accept="image/png, image/jpeg" hidden/>
+                        </div>
+                        <!--Ends the upload input-->
+                        <!--user input elements-->
+                        <div class="namebox">
+                            <label for="name" class="nametxt">Full Name</label>
+                            <input type="text" id="name" class="nameinput"/>
+                            <p class="namemsg">Your Name Is Required For The Booking!</p>
+                        </div>
+                        <div class="emailbox">
+                            <label for="email" class="emailtxt">Email Address</label>
+                            <input type="text" id="email" class="emailinput" placeholder="example@email.com"/>
+                            <p class="emailmsg">Your Email Is Required For The Booking!</p>
+                        </div>
+                        <div class="gitbox">
+                            <label for="git" class="gittxt">GitHub Username</label>
+                            <input type="text" id="git" class="gitinput" placeholder="@yourusername"/>
+                            <p class="gitmsg">Your GitHub Username Is Required For<br/> The Booking!</p>            
+                        </div>
+                        <!--End of user input elements-->
+                    </form>
+                    <div class="btnbox">
+                    <button class="genticket" id="generateBtn">Generate My Ticket</button>
+                    </div>
+                </div>
+            </section>
+            <section class="ticket">
+                <h1 class="conTXT">Congrats, <span class="userNameHeader"></span>!<br class="firstBR"/> Your ticket <br class="secondBR">is ready.</h1>
+                <p class="sucessTxt">We've emailed your ticket to<br/><span class="userEmail"></span> and will send updates in<br class="thirdBR"/> run up to the event.</p>
+                <div class="ticket-container">
+                    <img src="assets/images/pattern-ticket.svg" alt="" class="ticketBg"/>
+                    <div class="ticket-content">
+                        <img src="assets/images/logo-full.svg" class="ticket-logo"/>
+                        <p class="location">jan 31, 2025 / Austin, TX</p>
+                        <!--User detail section-->
+                        <div class="ticketAvatar">
+                            <img src="" alt="User avatar" class="userAvatar"/>
+                        </div>
+                        <p class="userName"></p>
+                        <img src="assets/images/icon-github.svg" class="gitIcon"/>
+                        <p class="gitUserName"></p>
+                        <div class="ticketId">#00143</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+    </html>
