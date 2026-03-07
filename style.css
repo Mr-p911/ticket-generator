@@ -229,10 +229,13 @@ header p{
     position: absolute;
     width: fit-content;
     max-width: 60px;
+    max-height: 60px;
+    height: fit-content;
     top: 8rem;
 }
 .userAvatar{
     width: 60px;
+    height: 60px;
     border-radius: 10px;
 }
 .location{
